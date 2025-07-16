@@ -33,7 +33,7 @@ hr {
 
 .buttons
 {
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .lev{
@@ -43,10 +43,8 @@ hr {
     justify-content: flex-start;
     flex-wrap: wrap;
     padding-bottom: 15px;
-    
-    
-    
 }
+
 .b {
   display: flex;
   flex-wrap: wrap;
