@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+    <Title> PowerPY </Title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "../styles.css" rel = "stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<!-- Prism CSS Theme (choose one, e.g., default or dark) -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+
+<!-- Prism JS Core + Language Support (e.g., JavaScript) -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+
+    <style>
+
+      body
+      {
+        padding: 0 15px;
+      }
+        #navbar {
+            background-color: rgb(0,0,0);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 0.01em solid white;
+            margin: 0 auto;
+            max-width: 1350px;
+           
+        }
+
+        .nav-link a{
+            white-space: nowrap;
+           
+        }
+
+        .nav-link {
+            font-size: 1.75rem;
+            display:flex;
+            justify-content: space-evenly;
+            gap: 2.5em;
+            margin: 0 auto;
+        }
+
+        
+
+        #t1
+        {
+            font-size: 2.5rem;
+        }
+
+        #t2
+        {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 1070px)
+        {
+  
+                #navbar
+                {
+                    flex-direction: column;
+                    
+                }
+                .nav-link
+                {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    
+                }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id = "navbar">
+        <div style = "vertical-align: middle; display:flex; align-items: center">
+        <img src = "../imgs/python.png" style = "max-width: 90px; height: auto; vertical-align: middle; 
+        padding: 0 15px; padding-top: .75rem">
+        <span style = "font-weight: bold; padding-left: 8px; color: #E50914" id = "t1"> 
+            PowerPY </span>
+        <span style = "padding-left: 1rem; padding-top: 10px" id = "t2"> Learn to innovate with python </span>
+        </div>
+        <div class = "nav-link">
+        <a>Login</a>
+        <a>Help</a>
+        <a>Reviews</a>
+        </div>
+    </div>
+    <button class = "home" onclick = "window.location.href = '../index.html'">&lt;&lt; Home</button>
+    <h2 style = "font-size: 3em">Project 3: Quantity Tracker</h2>
+    <p class = "inst">This project involves writing code for a function, trackNums(nums),
+        which takes in one list of integers named nums. Your task is to iterate through the list,
+        and store the amount of times each number appears in a new dictionary. In the dict,
+        the key for each pair should be the number, and the value should be the frequency of that number.
+        The function should return the new, final dictionary.
+    </p>
+    <div style = "display: flex; background-color: rgb(0,0,0,.3)" class = "samps">
+    <div class = "sample" style = "width: 50%; text-align: center;">
+    <h3 style = "font-size: 1.75rem"><em>trackNums([1, 1, 4, 5])</em></h3>
+    <img src = "../imgs/dict1.png" style = "width: 40%; padding: 5px 5px"/>
+    <p>In the list, '1' appears twice, while '4' and '5' appear once. So the key-value pairs are 1:4, 4:1, and 5:1.
+    </p>
+    </div>
+    <div class = "sample" style = "width: 50%; text-align: center;">
+    <h3 style = "font-size: 1.75rem"><em>trackNums([0, -3, 4, -3, -3, 0, 10])</em></h3>
+    <img src = "../imgs/dict2.png" style = "width: 60%; padding: 5px 5px"/>
+    <p>'0' appears twice, '-3' appears 3 times, and '4' and '10' appear once. The pairs are 
+        0:2, -3:3, 4:1, 10:1.
+    </p>
+    </div>
+    </div>
+    <div class = "proj_space">
+  
+    <div style = "margin-right: auto; margin-left: 40px; width: 60%">
+    <div id="editor">def trackNums(nums):
+    </div>
+    <button id = "run">Run Code</button>
+    </div>
+
+  <!-- Load Ace Editor -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.1/ace.js"></script>
+  <script>
+    let editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/python");
+    editor.setOptions({
+      fontFamily: "monospace",
+    });
+  </script>
+  
+    </div>
+</body>

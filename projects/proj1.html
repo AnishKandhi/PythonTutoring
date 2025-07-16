@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <Title> PowerPY </Title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "../styles.css" rel = "stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<!-- Prism CSS Theme (choose one, e.g., default or dark) -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+
+<!-- Prism JS Core + Language Support (e.g., JavaScript) -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+
+    <style>
+
+      body
+      {
+        padding: 0 15px;
+      }
+        #navbar {
+            background-color: rgb(0,0,0);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 0.01em solid white;
+            margin: 0 auto;
+            max-width: 1350px;
+           
+        }
+
+        .nav-link a{
+            white-space: nowrap;
+           
+        }
+
+        .nav-link {
+            font-size: 1.75rem;
+            display:flex;
+            justify-content: space-evenly;
+            gap: 2.5em;
+            margin: 0 auto;
+        }
+
+        
+
+        #t1
+        {
+            font-size: 2.5rem;
+        }
+
+        #t2
+        {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 1070px)
+        {
+  
+                #navbar
+                {
+                    flex-direction: column;
+                    
+                }
+                .nav-link
+                {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    
+                }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id = "navbar">
+        <div style = "vertical-align: middle; display:flex; align-items: center">
+        <img src = "../imgs/python.png" style = "max-width: 90px; height: auto; vertical-align: middle; 
+        padding: 0 15px; padding-top: .75rem">
+        <span style = "font-weight: bold; padding-left: 8px; color: #E50914" id = "t1"> 
+            PowerPY </span>
+        <span style = "padding-left: 1rem; padding-top: 10px" id = "t2"> Learn to innovate with python </span>
+        </div>
+        <div class = "nav-link">
+        <a>Login</a>
+        <a>Help</a>
+        <a>Reviews</a>
+        </div>
+    </div>
+    <button class = "home" onclick = "window.location.href = '../index.html'">&lt;&lt; Home</button>
+    <h2 style = "font-size: 3em">Project 1: Average Computing</h2>
+    <p class = "inst">This project involves creating a program that computes the average, or arithmetic mean, of user
+        entered values. You will need to prompt the user to enter three different values, and print the mean of these 
+        values to the console. This will involve type conversions, basic math, and user input handling.<br>
+        <em>(Hint: Try and except blocks will be needed to make sure the values the user is entering is 
+            able to be casted to an integer. In other words, make sure they are ints or floats, not strings).
+        </em>
+    </p>
+    <div style = "display: flex; background-color: rgb(0,0,0,.3)" class = "samps">
+    <div class = "sample" style = "width: 50%; text-align: center;">
+    <h3 style = "font-size: 1.75rem"><em>Sample Output</em></h3>
+    <img src = "../imgs/img1.png"/>
+    <p>The user is prompted to enter three numbers.
+        The user entered 2, 6, and 7. The average of them is 5, which is printed to the console.
+    </p>
+    </div>
+    <div class = "sample" style = "width: 50%; text-align: center;">
+    <h3 style = "font-size: 1.75rem"><em>Sample Output</em></h3>
+    <img src = "../imgs/img2.png"/>
+    <p>The user is prompted to enter three numbers.
+        The user entered 10, 7, 3. The average of them is 6.667, which is printed to the console.
+    </p>
+    </div>
+    </div>
+    <div class = "proj_space">
+  
+    <div style = "margin-right: auto; margin-left: 40px; width: 60%">
+    <div id="editor">#Enter python code here</div>
+    <button id = "run">Run Code</button>
+    </div>
+
+  <!-- Load Ace Editor -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.1/ace.js"></script>
+  <script>
+    let editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/python");
+    editor.setOptions({
+      fontFamily: "monospace",
+    });
+  </script>
+  
+    </div>
+</body>

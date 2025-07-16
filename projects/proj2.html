@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <Title> PowerPY </Title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "../styles.css" rel = "stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<!-- Prism CSS Theme (choose one, e.g., default or dark) -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+
+<!-- Prism JS Core + Language Support (e.g., JavaScript) -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+
+    <style>
+
+      body
+      {
+        padding: 0 15px;
+      }
+        #navbar {
+            background-color: rgb(0,0,0);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 0.01em solid white;
+            margin: 0 auto;
+            max-width: 1350px;
+           
+        }
+
+        .nav-link a{
+            white-space: nowrap;
+           
+        }
+
+        .nav-link {
+            font-size: 1.75rem;
+            display:flex;
+            justify-content: space-evenly;
+            gap: 2.5em;
+            margin: 0 auto;
+        }
+
+        
+
+        #t1
+        {
+            font-size: 2.5rem;
+        }
+
+        #t2
+        {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 1070px)
+        {
+  
+                #navbar
+                {
+                    flex-direction: column;
+                    
+                }
+                .nav-link
+                {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    
+                }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id = "navbar">
+        <div style = "vertical-align: middle; display:flex; align-items: center">
+        <img src = "../imgs/python.png" style = "max-width: 90px; height: auto; vertical-align: middle; 
+        padding: 0 15px; padding-top: .75rem">
+        <span style = "font-weight: bold; padding-left: 8px; color: #E50914" id = "t1"> 
+            PowerPY </span>
+        <span style = "padding-left: 1rem; padding-top: 10px" id = "t2"> Learn to innovate with python </span>
+        </div>
+        <div class = "nav-link">
+        <a>Login</a>
+        <a>Help</a>
+        <a>Reviews</a>
+        </div>
+    </div>
+    <button class = "home" onclick = "window.location.href = '../index.html'">&lt;&lt; Home</button>
+    <h2 style = "font-size: 3em">Project 2: Star Pattern</h2>
+    <p class = "inst">This project involves creating a program that writes a function called createStars(),
+        which produces a pattern of astricks (*) based on the function parameter. 
+        The function takes one integer parameter, n. If the parameter is even, the 
+        function outputs rows of stars with the first row 
+        having one star, the last having n stars, and the amount of stars increments for each subsequent row.
+        This will form a right triangle. <br>
+        If n is odd, the first row should have n stars, the last should have one, 
+        and each subsequent row should
+        decrement the number of stars it has. This will form an inverted right triangle.
+        <em>(Hint: the empty print() function with no parameters creates a new line).</em>
+        </em>
+    </p>
+    <div style = "display: flex; background-color: rgb(0,0,0,.3)" class = "samps">
+    <div class = "sample" style = "width: 50%; text-align: center;">
+    <h3 style = "font-size: 1.75rem"><em>createStars(4)</em></h3>
+    <img src = "../imgs/star1.png" style = "width: 30%"/>
+    <p>In this case, n = 4, which is an even number. So the stars will be printed from 
+        1 . . . n, incrementing each row.
+    </p>
+    </div>
+    <div class = "sample" style = "width: 50%; text-align: center;">
+    <h3 style = "font-size: 1.75rem"><em>createStars(5)</em></h3>
+    <img src = "../imgs/star2.png" style = "width: 25%"/>
+    <p>In this case, n = 5, which is odd. So the stars will print backwards, from n . . . 1, 
+        decrementing each row.
+    </p>
+    </div>
+    </div>
+    <div class = "proj_space">
+  
+    <div style = "margin-right: auto; margin-left: 40px; width: 60%">
+    <div id="editor">#Enter python code here</div>
+    <button id = "run">Run Code</button>
+    </div>
+
+  <!-- Load Ace Editor -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.1/ace.js"></script>
+  <script>
+    let editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/python");
+    editor.setOptions({
+      fontFamily: "monospace",
+    });
+  </script>
+  
+    </div>
+</body>
