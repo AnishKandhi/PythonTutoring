@@ -71,11 +71,11 @@ hr {
     height: 100px;
     font-size: 2.25rem;
     font-family: 'Nunito';
-    border-radius: 25px;
+    border-radius: 22px;
     text-align: center;
     line-height: 40px;
     color: rgb(246, 249, 245);
-    background-color: rgba(229, 9, 20, 1);
+    background-color: rgb(218, 8, 19);
     white-space: nowrap;
     border:none;
 }
@@ -147,7 +147,7 @@ hr {
     background: rgb(5, 5, 5) !important;
     overflow-x: auto !important;
     text-align: left  !important;
-    line-height: 60px !important;
+    line-height: 70px !important;
     font-size: 2rem !important;
     font-weight: 400;
     color: rgb(248, 246, 246) !important;
@@ -156,7 +156,6 @@ hr {
     box-sizing: border-box !important;
     text-shadow: none !important;
     box-shadow: none !important; 
-    
 }
 
 .codes
@@ -172,8 +171,10 @@ hr {
     text-align: left;
     font-size: 2rem;
     background: rgb(5, 5, 5) !important;
-    width: 90%;
     margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden !important;    
+    
 }
 
 pre, code
@@ -218,7 +219,7 @@ h2{
     height: auto;
     font-size: 2rem;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .home:hover
@@ -293,7 +294,7 @@ label
 .close
 {
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 90%;
     font-size: 2.5rem;
     background-color: transparent;
@@ -312,7 +313,7 @@ label
 
 #proj1
 {
-    background-color: rgba(229, 9, 20, .2);
+    background-color: rgba(229, 9, 20, .3);
     border: none;
     min-width: 150px;
     width: 10%;
@@ -358,8 +359,9 @@ label
 
 .samps p
 {
+    
     margin: 0 auto; 
-    width: 75%; 
+    width: 80%; 
     font-size: 1.6rem; 
     line-height: 2.5rem; 
     text-align: justify;
