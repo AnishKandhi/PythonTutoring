@@ -18,6 +18,7 @@
 <!-- Prism JS Core + Language Support (e.g., JavaScript) -->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
 
     <style>
 
@@ -123,8 +124,14 @@
     <div class = "proj_space">
   
     <div style = "margin-right: auto; margin-left: 40px; width: 60%">
+        <div class = "code_buttons">
+        <button>Fill Sample Solution</button>
+        </div>
     <div id="editor">#Enter python code here</div>
     <button id = "run">Run Code</button>
+    </div>
+    <div class = "output">
+    <h1>Output Results</h1>
     </div>
 
   <!-- Load Ace Editor -->
@@ -138,5 +145,14 @@
     });
   </script>
   
+    </div>
+    <div class = "ref">
+    <h1>Helpful References:</h1>
+    <ui>
+        <li><a href = "../Basics/variables.html">Lesson: Variables and Data Types
+        </a></li>
+        <li><a href = "../Basics/io.html">Lesson: User Input Handling
+        </a></li>
+    </ui>
     </div>
 </body>

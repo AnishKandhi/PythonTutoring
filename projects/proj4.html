@@ -18,6 +18,7 @@
 <!-- Prism JS Core + Language Support (e.g., JavaScript) -->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
 
     <style>
 
@@ -144,7 +145,7 @@ print(parent.add(4))
 print(child.add(4))
 #output: 9 9.0
     </code></pre>
-    <p style = "padding-top: 15px; width: 95%">
+    <p style = "padding-top: 15px; width: 100%">
         The parent's add() returns num (5) + 4, which is 9. The child's add() returns
         the parent call alongside the decimal addition of 5 + 4 = 9.0.
     </p>
@@ -159,7 +160,7 @@ print(parent.mult(4))
 print(child.mult(4))
 #output: 20 20.0
     </code></pre>
-    <p style = "padding-top: 15px; width: 95%">The parent's mult() returns num (5) * 4 = 20. The child mult()
+    <p style = "padding-top: 15px; width: 85%">The parent's mult() returns num (5) * 4 = 20. The child mult()
         returns the parent call alongside 5 * 4 = 20 converted to a float.
     </p>
     </div>
@@ -173,6 +174,9 @@ print(child.mult(4))
     <div id="editor">#Enter python code here</div>
     <button id = "run">Run Code</button>
     </div>
+    <div class = "output">
+    <h1>Output Results</h1>
+    </div>
 
   <!-- Load Ace Editor -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.1/ace.js"></script>
@@ -184,6 +188,14 @@ print(child.mult(4))
       fontFamily: "monospace",
     });
   </script>
-  
+    </div>
+    <div class = "ref">
+    <h1>Helpful References:</h1>
+    <ui>
+        <li><a href = "../OOP/classes.html">Lesson: Classes and Objects -> Declaration
+        </a></li>
+        <li><a href = "../OOP/inheritance.html">Lesson: Classes and Objects -> Inheritance
+        </a></li>
+    </ui>
     </div>
 </body>

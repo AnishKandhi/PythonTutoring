@@ -18,6 +18,7 @@
 <!-- Prism JS Core + Language Support (e.g., JavaScript) -->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
 
     <style>
 
@@ -128,8 +129,14 @@
     <div class = "proj_space">
   
     <div style = "margin-right: auto; margin-left: 40px; width: 60%">
+        <div class = "code_buttons">
+        <button>Fill Sample Solution</button>
+        </div>
     <div id="editor">#Enter python code here</div>
-    <button id = "run">Run Code</button>
+    <button id = "run" onclick = "runPyo()">Run Code</button>
+    </div>
+    <div class = "output">
+    <h1>Output Results</h1>
     </div>
 
   <!-- Load Ace Editor -->
@@ -142,6 +149,78 @@
       fontFamily: "monospace",
     });
   </script>
-  
+  <script>
+    async function runPyo()
+    {
+        let pyodide = await loadPyodide();
+        let code = editor.getValue();
+        let str1 = `
+*
+**
+        `
+        let str2 = `
+*
+**
+***
+****
+        `
+        let str3 = `
+*
+**
+***
+****
+*****
+******
+        `
+        let str4 = `
+***
+**
+*
+        `
+        let str5 = `
+*****
+****
+***
+**
+*
+        `
+        ans = {
+            2: str1,
+            3: str4,
+            4: str2,
+            5: str5,
+            6: str3
+        }
+        for (let key in ans)
+        {
+            run = `
+import io
+import sys
+buffer1 = io.StringIO()
+buffer2 = io.StringIO();
+sys.stdout = buffer1
+sys.stderr = buffer2
+${code}
+createStars(${Number(key)})
+output = buffer1.getvalue()
+error = buffer2.getvalue()
+output
+            `;
+            let result = await pyodide.runPythonAsync(run);
+            console.log(result.trim()===ans[Number(key)].trim());
+        }
+    }
+  </script>
+    </div>
+    <div class = "ref">
+    <h1>Helpful References:</h1>
+    <ui>
+        <li><a  href = "../logic/cntrlflow.html">Lesson: Conditional Statements
+        </a></li>
+        <li><a  href = "../logic/functions.html">Lesson: Defining Functions
+        </a></li>
+        <li><a  href = "../logic/loops.html">Lesson: For and While Loops
+        </a></li>
+    </ui>
     </div>
 </body>
